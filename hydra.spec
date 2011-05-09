@@ -1,13 +1,11 @@
 Name:		hydra
-Version:	6.2
+Version:	6.3
 Release:	%mkrel 1
 Summary:	Network logon cracker
 License:	GPLv3
 Group:		Networking/Other
 URL:		http://www.thc.org/thc-hydra/
 Source:     http://freeworld.thc.org/releases/hydra-%{version}-src.tar.gz
-Patch0:     hydra-6.2-src-fix-format-errors.patch
-Patch1:     hydra-6.2-src-fix-lib-path.patch
 BuildRequires: openssl-devel
 BuildRequires: pcre-devel
 BuildRequires: subversion-devel
@@ -34,8 +32,6 @@ GUI for %{name}.
 
 %prep
 %setup -q -n hydra-%{version}-src
-%patch0 -p 1
-%patch1 -p 1
 chmod 644 LICENSE
 
 %build
