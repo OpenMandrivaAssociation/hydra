@@ -1,5 +1,5 @@
 Name:		hydra
-Version:	6.3
+Version:	6.4
 Release:	%mkrel 1
 Summary:	Network logon cracker
 License:	GPLv3
@@ -56,7 +56,7 @@ rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root)
-%doc CHANGES INSTALL LICENSE* README TODO
+%doc CHANGES INSTALL LICENSE* README
 %{_bindir}/hydra
 %{_mandir}/man1/hydra.1*
 %{_mandir}/man1/pw-inspector.1*
