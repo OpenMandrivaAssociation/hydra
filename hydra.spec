@@ -1,9 +1,9 @@
 Name:		hydra
 Version:	6.4
-Release:	%mkrel 1
+Release:	%mkrel 2
 Summary:	Network logon cracker
 License:	GPLv3
-Group:		Networking/Other
+Group:		Monitoring
 URL:		http://www.thc.org/thc-hydra/
 Source:     http://freeworld.thc.org/releases/hydra-%{version}-src.tar.gz
 BuildRequires: openssl-devel
