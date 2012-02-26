@@ -1,6 +1,6 @@
 Name:		hydra
 Version:	7.2
-Release:	%mkrel 1
+Release:	%mkrel 2
 Summary:	Network logon cracker
 License:	GPLv3
 Group:		Monitoring
