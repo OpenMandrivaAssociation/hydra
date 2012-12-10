@@ -107,3 +107,33 @@ EOF
 %files pwinspector
 %{_bindir}/pw-inspector
 %{_mandir}/man1/pw-inspector.1*
+
+
+%changelog
+* Sun Feb 26 2012 Andrey Bondrov <abondrov@mandriva.org> 7.2-2
++ Revision: 780857
+- Bump release
+- New version 7.2
+
+  + Oden Eriksson <oeriksson@mandriva.com>
+    - relink against libpcre.so.1
+
+* Fri Nov 04 2011 Andrey Bondrov <abondrov@mandriva.org> 7.1-1
++ Revision: 717382
+- New version 7.1, new subpackage hydra-pwinspector, add XDG menu for GUI
+
+  + Guillaume Rousse <guillomovitch@mandriva.org>
+    - switch group to monitoring, as other security-related tools
+
+* Fri Jul 01 2011 Guillaume Rousse <guillomovitch@mandriva.org> 6.4-1
++ Revision: 688428
+- new version
+
+* Mon May 09 2011 Guillaume Rousse <guillomovitch@mandriva.org> 6.3-1
++ Revision: 673092
+- new version
+
+* Mon Apr 18 2011 Guillaume Rousse <guillomovitch@mandriva.org> 6.2-1
++ Revision: 655869
+- import hydra
+
