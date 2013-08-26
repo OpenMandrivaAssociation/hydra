@@ -1,2 +1,3 @@
 sources:
-  "hydra-7.2-src.tar.gz": 1f31cc2ee3605b5e46edce48ec23f6065c8df7f1
+  hydra-7.2-src.tar.gz: 1f31cc2ee3605b5e46edce48ec23f6065c8df7f1
+  hydra-7.5.tar.gz: 475980f8e6c0c97b7702201e89fbcf441a6fd2c0
