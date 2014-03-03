@@ -1,33 +1,45 @@
-Name:		hydra
-Version:	7.5
-Release:	1
 Summary:	Network logon cracker
-License:	GPLv3
+Name:		hydra
+Version:	7.6
+Release:	1
+License:	GPLv3+
 Group:		Monitoring
-URL:		http://www.thc.org/thc-hydra/
+Url:		http://www.thc.org/thc-hydra/
 Source0:	http://freeworld.thc.org/releases/hydra-%{version}.tar.gz
-BuildRequires: openssl-devel
-BuildRequires: pcre-devel
-BuildRequires: subversion-devel
-BuildRequires: mysql-devel
-BuildRequires: postgresql-devel
-BuildRequires: firebird-devel
-BuildRequires: ssh-devel
-BuildRequires: idn-devel
-BuildRequires: ncpfs-devel
-BuildRequires: gtk+2.0-devel
+BuildRequires:	firebird-devel
+BuildRequires:	mysql-devel
+BuildRequires:	ncpfs-devel
+BuildRequires:	postgresql-devel
+BuildRequires:	subversion-devel
+BuildRequires:	pkgconfig(gtk+-2.0)
+BuildRequires:	pkgconfig(libidn)
+BuildRequires:	pkgconfig(libpcre)
+BuildRequires:	pkgconfig(libssh)
+BuildRequires:	pkgconfig(openssl)
 
 %description
 A very fast network logon cracker which support many different services.
 
+%files
+%doc CHANGES INSTALL LICENSE* README
+%{_bindir}/hydra
+%{_mandir}/man1/hydra.1*
+%{_mandir}/man1/pw-inspector.1*
+
+#----------------------------------------------------------------------------
+
 %package gui
-Summary:    GUI for %{name}
-Summary:	Network logon cracker
-License:	GPLv3
-Requires:   %{name} = %{version}-%{release}
+Summary:	GUI for %{name}
+Requires:	%{name} = %{EVRD}
 
 %description gui
 GUI for %{name}.
+
+%files gui
+%{_bindir}/xhydra
+%{_mandir}/man1/xhydra.1*
+
+#----------------------------------------------------------------------------
 
 %prep
 %setup -q
@@ -48,12 +60,3 @@ install -m 755 hydra-gtk/src/xhydra %{buildroot}%{_bindir}
 install -d -m 755 %{buildroot}%{_mandir}/man1
 install -m 644 hydra.1 xhydra.1 pw-inspector.1 %{buildroot}%{_mandir}/man1
 
-%files
-%doc CHANGES INSTALL LICENSE* README
-%{_bindir}/hydra
-%{_mandir}/man1/hydra.1*
-%{_mandir}/man1/pw-inspector.1*
-
-%files gui
-%{_bindir}/xhydra
-%{_mandir}/man1/xhydra.1*
