@@ -1,6 +1,6 @@
 Summary:	Network logon cracker
 Name:		hydra
-Version:	8.0
+Version:	8.1
 Release:	1
 License:	GPLv3+
 Group:		Monitoring
@@ -46,10 +46,10 @@ GUI for %{name}.
 chmod 644 LICENSE
 
 %build
-%configure2_5x --disable-xhydra
+%configure --disable-xhydra
 %make
 cd hydra-gtk
-%configure2_5x
+%configure
 %make
 
 %install
@@ -59,4 +59,3 @@ install -m 755 hydra-gtk/src/xhydra %{buildroot}%{_bindir}
 
 install -d -m 755 %{buildroot}%{_mandir}/man1
 install -m 644 hydra.1 xhydra.1 pw-inspector.1 %{buildroot}%{_mandir}/man1
-
