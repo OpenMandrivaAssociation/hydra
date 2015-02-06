@@ -1,7 +1,7 @@
 Summary:	Network logon cracker
 Name:		hydra
 Version:	8.1
-Release:	1
+Release:	2
 License:	GPLv3+
 Group:		Monitoring
 Url:		http://www.thc.org/thc-hydra/
