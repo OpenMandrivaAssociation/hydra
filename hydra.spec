@@ -1,11 +1,11 @@
 Summary:	Network logon cracker
 Name:		hydra
-Version:	8.1
-Release:	2
+Version:	9.1
+Release:	1
 License:	GPLv3+
 Group:		Monitoring
-Url:		http://www.thc.org/thc-hydra/
-Source0:	http://freeworld.thc.org/releases/hydra-%{version}.tar.gz
+Url:		https://github.com/vanhauser-thc/thc-hydra/
+Source0:	https://github.com/vanhauser-thc/thc-hydra/archive/v%{version}.tar.gz
 BuildRequires:	firebird-devel
 BuildRequires:	mysql-devel
 BuildRequires:	ncpfs-devel
@@ -21,7 +21,7 @@ BuildRequires:	pkgconfig(openssl)
 A very fast network logon cracker which support many different services.
 
 %files
-%doc CHANGES INSTALL LICENSE* README
+%doc CHANGES INSTALL LICENSE*
 %{_bindir}/hydra
 %{_mandir}/man1/hydra.1*
 %{_mandir}/man1/pw-inspector.1*
@@ -42,15 +42,15 @@ GUI for %{name}.
 #----------------------------------------------------------------------------
 
 %prep
-%setup -q
+%setup -qn thc-%{name}-%{version}
 chmod 644 LICENSE
 
 %build
 %configure --disable-xhydra
-%make
+%make_build
 cd hydra-gtk
 %configure
-%make
+%make_build
 
 %install
 install -d -m 755 %{buildroot}%{_bindir}
