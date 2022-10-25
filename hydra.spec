@@ -1,11 +1,11 @@
 Summary:	Network logon cracker
 Name:		hydra
-Version:	9.2
+Version:	9.4
 Release:	1
 License:	GPLv3+
 Group:		Monitoring
 Url:		https://github.com/vanhauser-thc/thc-hydra/
-Source0:	https://github.com/vanhauser-thc/thc-hydra/archive/v%{version}.tar.gz
+Source0:	https://github.com/vanhauser-thc/thc-hydra/archive/v%{version}/thc-hydra-%{version}.tar.gz
 BuildRequires:	firebird-devel
 BuildRequires:	mysql-devel
 BuildRequires:	ncpfs-devel
@@ -13,7 +13,7 @@ BuildRequires:	postgresql-devel
 BuildRequires:	subversion-devel
 BuildRequires:	pkgconfig(gtk+-2.0)
 BuildRequires:	pkgconfig(libidn)
-BuildRequires:	pkgconfig(libpcre)
+BuildRequires:	pkgconfig(libpcre2-8)
 BuildRequires:	pkgconfig(libssh)
 BuildRequires:	pkgconfig(openssl)
 
