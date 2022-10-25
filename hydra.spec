@@ -11,6 +11,7 @@ BuildRequires:	mysql-devel
 BuildRequires:	ncpfs-devel
 BuildRequires:	postgresql-devel
 BuildRequires:	subversion-devel
+BuildRequires:  pkgconfig(fbclient)
 BuildRequires:	pkgconfig(gtk+-2.0)
 BuildRequires:	pkgconfig(libidn)
 BuildRequires:	pkgconfig(libpcre2-8)
