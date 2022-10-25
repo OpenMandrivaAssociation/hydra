@@ -6,6 +6,7 @@ License:	GPLv3+
 Group:		Monitoring
 Url:		https://github.com/vanhauser-thc/thc-hydra/
 Source0:	https://github.com/vanhauser-thc/thc-hydra/archive/v%{version}/thc-hydra-%{version}.tar.gz
+BuildRequires:  libc6
 BuildRequires:	firebird-devel
 BuildRequires:	mysql-devel
 BuildRequires:	ncpfs-devel
