@@ -1,0 +1,21 @@
+diff -up thc-hydra-9.4/configure.omv~ thc-hydra-9.4/configure
+--- thc-hydra-9.4/configure.omv~	2022-10-26 19:17:26.550786662 +0200
++++ thc-hydra-9.4/configure	2022-10-26 19:18:04.187113268 +0200
+@@ -1437,8 +1437,6 @@ if [ -n "$FIREBIRD_PATH" -o \
+         else
+             XLIBPATHS="-L/usr/lib -L/usr/local/lib"
+         fi
+-    else
+-        XLIBPATHS="-L/usr/lib -L/usr/local/lib -L/lib"
+     fi
+ fi
+ if [ -n "$MYSQL_IPATH" ]; then
+@@ -1557,7 +1555,7 @@ for i in $SSL_PATH \
+     if [ "$OLDPATH" = "$i" ]; then
+       OLDPATH="$i"
+     else
+-      XLIBPATHS="$XLIBPATHS -L$i"
++      [ "$i" != "/lib" -a "$i" != "/usr/lib" ] && XLIBPATHS="$XLIBPATHS -L$i"
+       OLDPATH="$i"
+     fi
+ done

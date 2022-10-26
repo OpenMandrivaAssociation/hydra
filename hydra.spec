@@ -6,12 +6,12 @@ License:	GPLv3+
 Group:		Monitoring
 Url:		https://github.com/vanhauser-thc/thc-hydra/
 Source0:	https://github.com/vanhauser-thc/thc-hydra/archive/v%{version}/thc-hydra-%{version}.tar.gz
-BuildRequires:  libc6
+Patch0:		hydra-9.4-no-Llib.patch
 BuildRequires:	firebird-devel
 BuildRequires:	mysql-devel
 BuildRequires:	ncpfs-devel
-BuildRequires:	postgresql-devel
-BuildRequires:	subversion-devel
+BuildRequires:	pkgconfig(libpq)
+BuildRequires:	pkgconfig(libsvn_fs)
 BuildRequires:  pkgconfig(fbclient)
 BuildRequires:	pkgconfig(gtk+-2.0)
 BuildRequires:	pkgconfig(libidn)
@@ -44,7 +44,7 @@ GUI for %{name}.
 #----------------------------------------------------------------------------
 
 %prep
-%setup -qn thc-%{name}-%{version}
+%autosetup -p1 -n thc-%{name}-%{version}
 chmod 644 LICENSE
 
 %build
