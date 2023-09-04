@@ -1,6 +1,6 @@
 Summary:	Network logon cracker
 Name:		hydra
-Version:	9.4
+Version:	9.5
 Release:	1
 License:	GPLv3+
 Group:		Monitoring
