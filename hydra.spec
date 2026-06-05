@@ -1,7 +1,7 @@
 Summary:	Network logon cracker
 Name:		hydra
 Version:	9.5
-Release:	1
+Release:	2
 License:	GPLv3+
 Group:		Monitoring
 Url:		https://github.com/vanhauser-thc/thc-hydra/
