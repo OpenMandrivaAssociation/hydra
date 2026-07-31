@@ -1,7 +1,7 @@
 Summary:	Network logon cracker
 Name:		hydra
-Version:	9.5
-Release:	2
+Version:	9.7
+Release:	1
 License:	GPLv3+
 Group:		Monitoring
 Url:		https://github.com/vanhauser-thc/thc-hydra/
@@ -49,7 +49,7 @@ GUI for %{name}.
 #----------------------------------------------------------------------------
 
 %prep
-%autosetup -p1 -n thc-%{name}-%{version}
+%autosetup -p1 -n thc-hydra-9.7
 chmod 644 LICENSE
 
 %build
